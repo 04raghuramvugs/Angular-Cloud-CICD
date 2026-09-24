@@ -1,1 +1,9 @@
-{}
+{
+  "routes": [
+    {
+      "route": "/dashboard",
+      "rewrite": "/dashboard",
+      "statusCode": 404
+    }
+  ]
+}
