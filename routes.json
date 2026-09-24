@@ -1,6 +1,8 @@
-
+{
+  "routes": [
     {
       "route": "/*",
-      "rewrite": "/index.html"
+      "rewrite": "src/index.html"
     }
- 
+  ]
+}
