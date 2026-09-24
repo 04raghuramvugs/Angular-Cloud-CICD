@@ -2,7 +2,7 @@
   "routes": [
     {
       "route": "/*",
-      "rewrite": "src/index.html"
+      "rewrite": "/index.html"
     }
   ]
 }
