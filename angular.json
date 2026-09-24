@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/Angular-Cloud-CICD/browser",
+            "outputPath": "dist/Angular-Cloud-CICD",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
