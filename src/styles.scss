@@ -30,6 +30,12 @@ html {
 
 .dark-theme {
   @include mat.all-component-colors($dark-theme);
+  .nav-list, .header {
+    background: #000!important; // or a gradient
+  }
+  .kpi-card {
+    background: var(--bg-surface)!important;
+  }
   color-scheme: dark;
 }
 
@@ -126,3 +132,6 @@ body {
   background: var(--bg-page);
   color: var(--text-primary);
 }
+
+
+

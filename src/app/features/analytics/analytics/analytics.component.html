@@ -7,14 +7,7 @@
   <!-- KPI Cards -->
   <app-analytics-kpi-row [kpis]="store.kpis()" />
 
-  <!-- Traffic Trend (Full Width) -->
-  <section class="chart-full">
-    <app-traffic-chart
-      [data]="store.trafficData()"
-      [isDarkMode]="themeService.isDarkMode()" />
-  </section>
-
-  <!-- Channel + Device Row -->
+    <!-- Channel + Device Row -->
   <section class="charts-row">
     <app-channel-chart
       [data]="store.channelData()"
@@ -23,4 +16,13 @@
       [data]="store.deviceData()"
       [isDarkMode]="themeService.isDarkMode()" />
   </section>
+
+  <!-- Traffic Trend (Full Width) -->
+  <section class="chart-full">
+    <app-traffic-chart
+      [data]="store.trafficData()"
+      [isDarkMode]="themeService.isDarkMode()" />
+  </section>
+
+
 </div>

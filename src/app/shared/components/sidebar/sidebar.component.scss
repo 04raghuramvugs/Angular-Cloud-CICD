@@ -42,6 +42,9 @@
   flex: 1;
   padding: 8px;
   overflow-y: auto;
+  //background-color: #3b91ff;
+   //background: linear-gradient(135deg, #3b91ff, #1e3c72);
+  background: radial-gradient(circle at center, #034878 0%, #04f1ff 50%, #7d9dff 100%);
 
   a[mat-list-item] {
     border-radius: var(--radius-md);
@@ -84,7 +87,7 @@
 // ── Badge ─────────────────────────────────────────────────────
 .badge {
   margin-left: auto;
-  background: var(--color-danger);
+  background: #fff;
   color: var(--color-on-danger);
   font-size: 11px;
   font-weight: 600;

@@ -6,13 +6,6 @@
     }
   </section>
 
-  <!-- Revenue Chart (Full Width) -->
-  <section class="chart-full">
-    <app-revenue-chart
-      [data]="store.revenueData()"
-      [isDarkMode]="themeService.isDarkMode()" />
-  </section>
-
   <!-- Secondary Charts Row -->
   <section class="charts-row">
     <app-category-chart
@@ -22,6 +15,15 @@
       [data]="store.distributionData()"
       [isDarkMode]="themeService.isDarkMode()" />
   </section>
+  
+  <!-- Revenue Chart (Full Width) -->
+  <section class="chart-full">
+    <app-revenue-chart
+      [data]="store.revenueData()"
+      [isDarkMode]="themeService.isDarkMode()" />
+  </section>
+
+  
 
   <!-- Activity Feed -->
   <section class="activity-section">
