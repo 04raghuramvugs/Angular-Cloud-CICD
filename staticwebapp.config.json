@@ -2,7 +2,7 @@
   "routes": [
     {
       "route": "/dashboard",
-      "rewrite": "/index.html",
+      "rewrite": "/dashboard",
       "statusCode": 404
     }
   ]
