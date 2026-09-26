@@ -44,7 +44,7 @@ export class LoginComponent {
   private formBuilder = inject(FormBuilder);
   private destroyRef = inject(DestroyRef);
 
-  readonly demoEmail = 'admin@demo.com';
+  readonly demoEmail = 'user@info.com';
   readonly demoPassword = 'password';
 
   form: FormGroup;

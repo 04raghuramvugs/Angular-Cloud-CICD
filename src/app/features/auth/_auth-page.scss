@@ -1,5 +1,6 @@
 // Shared layout for login and register pages
 
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -28,17 +29,24 @@
   align-items: center;
   min-height: 100vh;
   padding: 24px;
-  background: var(--bg-page);
+ // background: var(--bg-page);
 
+  background: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  
   @media (max-width: 480px) {
     padding: 0;
     align-items: stretch;
   }
 }
 
+
 .auth-card {
   width: 100%;
-  background: var(--bg-surface);
+  //background: var(--bg-surface);
+  background: #1dffff;
   color: var(--text-primary);
   // M3 Level 1 elevation (adapts in dark mode via custom property)
   box-shadow: var(--shadow-sm);
@@ -135,11 +143,11 @@
   p {
     margin: 0 0 8px;
     // M3 label-small: 11px / 16px / 500
-    font-size: 0.6875rem;
+    font-size: 13px;
     line-height: 1rem;
     font-weight: 500;
     color: var(--text-secondary);
-    text-transform: uppercase;
+    //text-transform: none;
     letter-spacing: 0.5px;
   }
 
@@ -149,7 +157,7 @@
 
   .demo-credentials {
     // M3 body-small: 12px / 16px / 400
-    font-size: 0.75rem;
+    font-size: 13px;
     line-height: 1rem;
     color: var(--text-secondary);
     margin: 8px 0 0;

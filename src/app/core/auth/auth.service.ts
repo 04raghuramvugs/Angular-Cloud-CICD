@@ -17,7 +17,7 @@ const STORAGE_KEYS = {
 
 const DEMO_USER: User = {
   id: 'usr-001',
-  email: 'admin@demo.com',
+  email: 'user@info.com',
   firstName: 'Admin',
   lastName: 'User',
   role: Role.Admin,
