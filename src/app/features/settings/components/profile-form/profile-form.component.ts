@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { ToastrService } from 'ngx-toastr';
 
 export interface ProfileData {
   firstName: string;
@@ -35,6 +36,7 @@ export interface ProfileData {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProfileFormComponent {
+  toastr = inject(ToastrService);
   private readonly formBuilder = inject(FormBuilder);
 
   readonly profile = input.required<ProfileData>();
@@ -49,13 +51,20 @@ export class ProfileFormComponent {
     department: [''],
   });
 
-  ngOnInit(): void {
-    this.form.patchValue(this.profile());
+  
+
+  ngOnInit(): void {    
+    if(localStorage.getItem('userProfile') == null ) {    
+      this.form.patchValue(this.profile());      
+    } else {
+      this.form.patchValue(JSON.parse(localStorage.getItem('userProfile') || '{}'));      
+    }   
   }
 
   onSubmit(): void {
     if (this.form.valid) {
       this.profileSaved.emit(this.form.getRawValue());
+      this.toastr.success('User data submitted successfully!');      
     } else {
       this.form.markAllAsTouched();
     }

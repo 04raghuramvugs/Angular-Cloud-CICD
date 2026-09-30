@@ -3,6 +3,7 @@ import {
   Component,
   inject,
   signal,
+  
 } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
@@ -50,6 +51,7 @@ export class SettingsComponent {
   });
 
   onProfileSaved(data: ProfileData): void {
+    localStorage.setItem('userProfile', JSON.stringify(data));        
     this.profile.set(data);
   }
 
@@ -60,4 +62,6 @@ export class SettingsComponent {
   onThemeToggled(): void {
     this.themeService.toggleTheme();
   }
+
+   
 }

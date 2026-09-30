@@ -13,6 +13,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatDividerModule } from '@angular/material/divider';
 import { ThemeService } from '../../../core/services/theme.service';
 import { AuthService } from '../../../core/auth/auth.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -24,7 +25,8 @@ import { AuthService } from '../../../core/auth/auth.service';
     MatMenuModule,
     MatBadgeModule,
     MatDividerModule,
-  ],
+    RouterLink
+],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

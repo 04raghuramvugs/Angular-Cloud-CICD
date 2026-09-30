@@ -20,6 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { Role } from '../../../../core/models/auth.model';
 import { UserItem, UserStatus } from '../../models/users.model';
+import { ToastrService } from 'ngx-toastr';
 
 export interface UserDialogData {
   mode: 'create' | 'edit';
@@ -51,12 +52,15 @@ export interface UserDialogResult {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserDialogComponent {
+  
+  toastr = inject(ToastrService);
+  
   private readonly fb = inject(FormBuilder);
   private readonly dialogRef = inject(MatDialogRef<UserDialogComponent>);
   readonly data = inject<UserDialogData>(MAT_DIALOG_DATA);
 
   readonly isEdit = this.data.mode === 'edit';
-
+  
   readonly roles = [
     { value: Role.Admin, label: 'Admin' },
     { value: Role.Editor, label: 'Editor' },
@@ -91,6 +95,8 @@ export class UserDialogComponent {
   onSubmit(): void {
     if (this.form.valid) {
       this.dialogRef.close(this.form.getRawValue());
+      //alert('User data submitted successfully!');
+      this.toastr.success('User data submitted successfully!');      
     } else {
       this.form.markAllAsTouched();
     }

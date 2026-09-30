@@ -3,6 +3,7 @@ import {
   Component,
   DestroyRef,
   inject,
+  OnInit,
   signal,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -38,7 +39,7 @@ import { AuthService } from '../../../core/auth/auth.service';
   styleUrl: './login.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   private authService = inject(AuthService);
   private router = inject(Router);
   private formBuilder = inject(FormBuilder);
@@ -57,6 +58,10 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
+  }
+  
+  ngOnInit(): void {    
+    localStorage.removeItem('userProfile');
   }
 
   togglePasswordVisibility(): void {
