@@ -30,7 +30,7 @@ html {
 
 .dark-theme {
   @include mat.all-component-colors($dark-theme);
-  .nav-list, .header {
+  .nav-list, .header, .auth-card {
     background: #000!important; // or a gradient
   }
   .kpi-card {
