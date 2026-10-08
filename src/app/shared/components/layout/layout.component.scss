@@ -30,3 +30,9 @@ mat-sidenav-content {
   flex: 1;
   overflow-y: auto;
 }
+
+@media (max-width: 767px) {
+  mat-sidenav-content {
+    margin-left: 0 !important;
+  }
+}
